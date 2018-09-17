@@ -1,4 +1,4 @@
- var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var radius = Math.min(window.innerWidth, window.innerHeight);
@@ -19,19 +19,19 @@ function drawCircles(rBitset, gBitset, bBitset){
 	for(var i = 0, pow2 = 1; i < 10; i++, pow2 *= 2){
 		color = "#";
 		if(pow2 & rBitset){
-			color += "F";
-		} else {
 			color += "0";
+		} else {
+			color += "F";
 		}
 		if(pow2 & gBitset){
-			color += "F";
-		} else {
 			color += "0";
+		} else {
+			color += "F";
 		}
 		if(pow2 & bBitset){
-			color += "F";
-		} else {
 			color += "0";
+		} else {
+			color += "F";
 		}
 		ctx.fillStyle = color;
 		ctx.beginPath();
