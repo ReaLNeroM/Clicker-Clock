@@ -33,6 +33,7 @@ function drawCircles(rBitset, gBitset, bBitset){
 		} else {
 			color += "F";
 		}
+
 		ctx.fillStyle = color;
 		ctx.beginPath();
 		ctx.arc(getNthCircleX(i), canvas.height / 2, circleSize, 0, fullRotation);
@@ -63,10 +64,10 @@ function drawTime(){
 	minute = start.getMinutes();
 	second = start.getSeconds();
 
-	drawCircles((1 << Math.floor(hour / 10  )) | (1 << Math.floor(hour % 10  )),
+	drawCircles((1 << Math.floor(hour   / 10)) | (1 << Math.floor(hour   % 10)),
 				(1 << Math.floor(minute / 10)) | (1 << Math.floor(minute % 10)),
 				(1 << Math.floor(second / 10)) | (1 << Math.floor(second % 10)));
-	drawCurve(Math.floor(hour / 10), Math.floor(hour % 10), 100.0, "#F00");
+	drawCurve(Math.floor(hour   / 10), Math.floor(hour   % 10), 100.0, "#F00");
 	drawCurve(Math.floor(minute / 10), Math.floor(minute % 10), 300.0, "#0F0");
 	drawCurve(Math.floor(second / 10), Math.floor(second % 10), 320.0, "#00F");
 }
