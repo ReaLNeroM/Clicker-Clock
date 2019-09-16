@@ -72,4 +72,4 @@ function drawTime(){
 	drawCurve(Math.floor(second / 10), Math.floor(second % 10), 320.0, "#00F");
 }
 
-setInterval(drawTime, 500);
+setInterval(drawTime, 100);
